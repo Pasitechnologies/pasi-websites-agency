@@ -1,0 +1,15 @@
+/* Lightweight entrance and ambient motion; all motion is disabled for reduced-motion users. */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.65,.25,1); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.value-grid .reveal:nth-child(2), .services-grid .reveal:nth-child(2), .projects-grid .reveal:nth-child(2), .benefits-grid .reveal:nth-child(2) { transition-delay: .08s; }
+.value-grid .reveal:nth-child(3), .services-grid .reveal:nth-child(3), .projects-grid .reveal:nth-child(3), .benefits-grid .reveal:nth-child(3) { transition-delay: .16s; }
+.services-grid .reveal:nth-child(4), .benefits-grid .reveal:nth-child(4) { transition-delay: .05s; }
+.services-grid .reveal:nth-child(5), .benefits-grid .reveal:nth-child(5) { transition-delay: .13s; }
+.services-grid .reveal:nth-child(6), .benefits-grid .reveal:nth-child(6) { transition-delay: .21s; }
+.float-tag { animation: tag-drift 5s ease-in-out infinite; }
+.tag-responsive { animation-delay: -2.4s; }
+.art-spark { animation: spark-pulse 3.8s ease-in-out infinite; }
+.spark-two { animation-delay: -1.6s; }
+@keyframes tag-drift { 0%,100% { translate: 0 0; } 50% { translate: 0 -7px; } }
+@keyframes spark-pulse { 0%,100% { opacity: .45; transform: scale(.88) rotate(0); } 50% { opacity: 1; transform: scale(1.08) rotate(45deg); } }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .float-tag,.art-spark { animation: none; } }
