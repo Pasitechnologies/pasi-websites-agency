@@ -1,48 +1,41 @@
-# PASI Website Agency — Phase 1 homepage
+# PASI Website Agency — Phase 2 multi-page frontend
 
-A responsive, single-page brand and homepage experience for PASI Website Agency, built with semantic HTML, CSS and vanilla JavaScript. No build step or frontend framework is required.
+A responsive, multi-page digital agency website built with semantic HTML, CSS and vanilla JavaScript. No build step or frontend framework is required. Phase 2 preserves the existing homepage and extends the same visual identity to the public information pages.
 
 ## Run locally
 
-1. Download or clone this repository.
-2. Open `index.html` in a modern browser, or serve the project directory with a local static server. For example:
+From the project directory, start a static server, for example:
 
-   ```bash
-   python3 -m http.server 8000
-   ```
-
-3. Visit `http://localhost:8000`.
-
-Google Fonts, Font Awesome, and the demonstration photography are loaded from their public CDNs, so an internet connection is needed for those assets. The page itself remains usable without the external icon/font requests.
-
-## Project structure
-
-```text
-index.html
-css/
-  style.css
-  responsive.css
-  animations.css
-js/
-  main.js
-  navigation.js
-assets/
-  logo/pasi-mark.svg
+```bash
+python3 -m http.server 8000
 ```
 
-## What's included
+Open `http://localhost:8000`. An internet connection is used for Google Fonts, Font Awesome and remote demonstration photography.
 
-- Sticky transparent-to-solid navigation with mobile menu and active-section indicator.
-- Hero visual composed with CSS and a responsive website/device mockup.
-- About, six services, three clearly labelled demonstration portfolio concepts, six benefits, five process steps, contact CTA and footer.
-- Accessible portfolio concept dialogs, scroll reveals, back-to-top control, focus states and reduced-motion support.
-- Responsive layouts for mobile, tablet and desktop.
+## Pages
+
+- `index.html` — Phase 1 homepage.
+- `about.html` — agency, mission, vision and values.
+- `services.html` — six detailed service descriptions.
+- `portfolio.html` — filtered gallery of clearly labelled demonstration concepts.
+- `process.html` — five-stage collaborative project process.
+- `contact.html` — contact details placeholders, client-side form validation and FAQ.
+- `quote.html` — project brief form with client-side validation only.
+- `privacy.html` — current frontend privacy information.
+
+## Phase 2 functionality
+
+- Shared sticky navigation, mobile menu, brand styling, footer and back-to-top control on Phase 2 pages.
+- Accessible category buttons for portfolio filtering and native dialog project previews.
+- Contact and quote forms validate locally. They **do not submit, send, or save data**; backend integration is not included in this phase.
+- Scroll reveal effects respect reduced-motion preferences.
 
 ## Before launch
 
-- Replace the `mailto:` CTA destinations with PASI's confirmed business email address. They intentionally contain no pre-filled address because none was provided.
-- Add confirmed contact and social profile details to the footer when available.
-- Review the photography and CDN usage/licensing for the intended production deployment. Portfolio imagery is illustrative; the projects are explicitly described as demonstration concepts, not client work.
-- Test on the final hosting domain and verify image/CDN availability. Add a final Open Graph image and canonical URL once the production domain is known.
+- Replace `https://example.com/...` canonical placeholders with the actual production URLs.
+- Confirm and add PASI's official email, phone/WhatsApp number, working hours and social profiles. Until then, they are intentionally identified as unconfirmed rather than fabricated.
+- The original Phase 1 homepage is preserved. Its original in-page navigation and anchor-based CTAs remain; Phase 2 pages use the shared multi-page navigation.
+- Review remote image, font and icon provider terms and availability for production. The three portfolio entries are demonstration concepts, not claims about completed client work.
+- Connect and test a real form service in the appropriate later phase before describing either form as live.
 
-This is **Phase 1 only**. It does not include additional pages, a database, Supabase, authentication, or an admin dashboard.
+No Supabase, authentication, admin dashboard or other Phase 3/4 backend work is included.
